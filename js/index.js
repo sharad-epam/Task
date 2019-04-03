@@ -10,8 +10,8 @@ const getResults = (
   resultHtml += `${item}<div class="title">${title}</div><div class="desc">${description}</div><div class="publish">${publishedAt}</div><div class="img"><a href="${url}" target="_blank"><img class="pic" src=${urlToImage} /></a></div>`;
 };
 const fetchingNews = async url => {
-  try {
-      const res = await fetch(url);
+ try {
+    const res = await fetch(url);
     let data = await res.json();
     let newsId = document.getElementById("news");
     data = data.articles.map((item, index) => getResults(item, index));
@@ -19,10 +19,6 @@ const fetchingNews = async url => {
   } catch (err) {
     console.error(err);
   }
-  let data = await res.json();
-  let newsId = document.getElementById("news");
-  data = data.articles.map((item, index) => getResults(item, index));
-  newsId.insertAdjacentHTML("afterbegin", resultHtml);
 };
 
 fetchingNews(url);
