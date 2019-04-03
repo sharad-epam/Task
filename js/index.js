@@ -3,15 +3,15 @@
 const API_KEY = `acfe6a939a5642678d8ea20b50748780`;
 const channel = "bbc-news";
 const URL = `https://newsapi.org/v1/articles?source=${channel}&apiKey=${API_KEY}`;
-const resultHtml = "";
-let getResults = (
+let resultHtml = "";
+const getResults = (
   { author, title, description, publishedAt, url, urlToImage },
   index
 ) => {
   const item = index === 0 ? `<h1 class="author">${author}</h1>` : "";
   resultHtml += `${item}<div class="title">${title}</div><div class="desc">${description}</div><div class="publish">${publishedAt}</div><div class="img"><a href="${url}" target="_blank"><img class="pic" src=${urlToImage} /></a></div>`;
 };
-let fetchingNews = async url => {
+const fetchingNews = async url => {
   const res = await fetch(url);
   let data = await res.json();
   data = data.articles.map((item, index) => getResults(item, index));
