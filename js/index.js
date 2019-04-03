@@ -16,7 +16,7 @@ const fetchingNews = async url => {
   let data = await res.json();
   let newsId = document.getElementById("news");
   data = data.articles.map((item, index) => getResults(item, index));
-  newsId.insertAdjacentHTML("afterbegin", returnHtml);
+  newsId.insertAdjacentHTML("afterbegin", resultHtml);
 };
 
 fetchingNews(URL);
