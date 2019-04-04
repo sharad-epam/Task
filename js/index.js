@@ -21,5 +21,7 @@ class fetchItems{
 
 }
 
-export default result=new fetchItems();
+const result=new fetchItems();
+
+export default result;
 
