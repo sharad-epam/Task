@@ -90,4 +90,4 @@ class ResultInfo extends HTMLElement {
   }
 }
 
-customElements.define("result-info", ResultInfo, { extends: "ul" });
+customElements.define("result-info", ResultInfo);
