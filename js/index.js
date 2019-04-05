@@ -19,7 +19,6 @@ class fetchItems {
       let data = await res.json();
       let newsId = document.getElementById("news");
       data = data.articles.map((item, index) => getResults(item, index));
-      newsId.insertAdjacentHTML("afterbegin", resultHtml);
     } catch (err) {
       console.error(err);
     }
