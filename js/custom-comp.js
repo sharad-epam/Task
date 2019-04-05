@@ -38,9 +38,6 @@ class ResultInfo extends HTMLElement {
     const style = document.createElement("style");
     console.log(style.isConnected);
     style.innerHTML = `
-    .container {
-        margin: 40px;
-      }
       .news {
         display: flex;
         flex-direction: column;
@@ -78,7 +75,6 @@ class ResultInfo extends HTMLElement {
           width: 50%;
         }
       }
-      
     `;
     shadow.appendChild(style);
     console.log(style.isConnected);
