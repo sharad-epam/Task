@@ -36,6 +36,7 @@ class ResultInfo extends HTMLElement {
     img.appendChild(pic);
 
     const style = document.createElement("style");
+    console.log(style.isConnected);
     style.textContent = `
     .container {
         margin: 40px;
