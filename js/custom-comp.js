@@ -37,7 +37,7 @@ class ResultInfo extends HTMLElement {
 
     const style = document.createElement("style");
     console.log(style.isConnected);
-    style.textContent = `
+    style.innerHTML = `
     .container {
         margin: 40px;
       }
