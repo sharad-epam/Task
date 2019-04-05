@@ -32,7 +32,7 @@ class ResultInfo extends HTMLElement {
     this.hasAttribute("img") ? (imgUrl = this.getAttribute("img")) : "No Image";
 
     let pic = document.createElement("img");
-    publish.setAttribute("class", "pic");
+    pic.setAttribute("class", "pic");
     pic.src = imgUrl;
     img.appendChild(pic);
 
@@ -46,12 +46,6 @@ class ResultInfo extends HTMLElement {
       .author {
         text-align: center;
         border-bottom: 5px solid #dfe6e9;
-      }
-      .pic {
-        width: 250px;
-        height: 200px;
-        border-radius: 6%;
-        margin: 10px;
       }
       .title {
         font-size: 20px;
