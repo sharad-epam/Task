@@ -3,7 +3,7 @@ class ResultInfo extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
-    author.setAttribute("class", "container");
+    wrapper.setAttribute("class", "container");
 
     const news = document.createElement("div");
     news.setAttribute("id", "news");
@@ -90,4 +90,4 @@ class ResultInfo extends HTMLElement {
   }
 }
 
-customElements.define("result-info", ResultInfo);
+customElements.define("result-info", ResultInfo, { extends: "ul" });
