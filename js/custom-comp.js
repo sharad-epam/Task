@@ -10,15 +10,11 @@ class ResultInfo extends HTMLElement {
 
     const author = document.createElement("h1");
     author.setAttribute("class", "author");
-
-    const authorText = this.getAttribute("author");
-    author.textContent = authorText;
-    //author.textContent = this.getAttribute("author");
+    author.textContent = this.getAttribute("author");
 
     const title = document.createElement("div");
     title.setAttribute("class", "title");
-    const titleText = this.getAttribute("author");
-    title.textContent = this.getAttribute("titleText");
+    title.textContent = this.getAttribute("title");
 
     const desc = document.createElement("div");
     desc.setAttribute("class", "desc");
