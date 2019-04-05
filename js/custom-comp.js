@@ -35,6 +35,28 @@ class ResultInfo extends HTMLElement {
     publish.setAttribute("class", "pic");
     pic.src = imgUrl;
     img.appendChild(pic);
+    
+    let resultHtml = "";
+      const getResults = (
+        { author, title, description, publishedAt, url, urlToImage },
+        index
+      ) => {
+        console.log(title);
+        const item = index === 0 ? `<result-info ${author} >` : "";
+        resultHtml += `<div><result-info title="${title}" description="${description}" publishedAt="${publishedAt}" img="${urlToImage}"></result-info></div>`;
+      };
+
+      const fetchingNews = async url => {
+      try {
+          const res = await fetch(url);
+          let data = await res.json();
+          let newsId = document.getElementById("news");
+          data.articles.map((item, index) => getResults(item, index));
+          newsId.insertAdjacentHTML("afterend", resultHtml);
+      } catch (err) {
+          console.error(err);
+      }
+      };
 
     const style = document.createElement("style");
     console.log(style.isConnected);
