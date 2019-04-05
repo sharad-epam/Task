@@ -1,3 +1,4 @@
+
 let resultHtml = "";
 const getResults = (
   { author, title, description, publishedAt, url, urlToImage },
@@ -5,7 +6,9 @@ const getResults = (
 ) => {
   console.log(title);
   const item = index === 0 ? `<result-info ${author} >` : "";
-  resultHtml += `<div><result-info title="${title}" description="${description}" publishedAt="${publishedAt}" img="${urlToImage}"></result-info></div>`;
+  document.getElementById(
+    "news"
+  ).innerHTML = `<div><result-info item="${item}" title="${title}" description=${description} publishedAt=${publishedAt} urlToImage=${urlToImage}></result-info>${description}</div>`;
 };
 class fetchItems {
   fetchingNews = async url => {
