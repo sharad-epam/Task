@@ -5,7 +5,7 @@ const getResults = (
   index
 ) => {
   console.log(title);
-  const item = index === 0 ? `<result-info ${author} >` : "";
+  const item = index === 0 ? `${author}` : "";
     resultHtml += `<div><result-info author="${item}" title="${title}" desc="${description}" publish="${publishedAt}" src="${urlToImage}"></result-info></div>`;
 };
 class fetchItems {
