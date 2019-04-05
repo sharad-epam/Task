@@ -78,8 +78,7 @@ class ResultInfo extends HTMLElement {
       }
       
     `;
-
-    let news = document.createElement("li");
+    let news = document.createElement("div");
     shadow.appendChild(style);
     console.log(style.isConnected);
     shadow.appendChild(wrapper);
