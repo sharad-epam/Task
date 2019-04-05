@@ -93,5 +93,3 @@ class ResultInfo extends HTMLElement {
 }
 
 customElements.define("result-info", ResultInfo, { extends: "ul" });
-const resultElements = new ResultInfo();
-export default resultElements;
