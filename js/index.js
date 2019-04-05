@@ -3,7 +3,8 @@ const getResults = (
   { author, title, description, publishedAt, url, urlToImage },
   index
 ) => {
-  const item = index === 0 ?<result-info [author]=`${item}` ></result-info> : "";
+  const item =
+    index === 0 ? `<result-info [author]=${item} ></result-info>` : "";
   resultHtml += `${item}<div class="title">${title}</div><div class="desc">${description}</div><div class="publish">${publishedAt}</div><div class="img"><a href="${url}" target="_blank"><img class="pic" src=${urlToImage} /></a></div>`;
 };
 class fetchItems {
@@ -22,4 +23,3 @@ class fetchItems {
 
 const result = new fetchItems();
 export default result;
-
