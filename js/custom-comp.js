@@ -38,7 +38,6 @@ class ResultInfo extends HTMLElement {
     const style = document.createElement("style");
     console.log(style.isConnected);
     style.innerHTML = `
-    <style>
       .news {
         display: flex;
         flex-direction: column;
@@ -76,7 +75,7 @@ class ResultInfo extends HTMLElement {
           width: 50%;
         }
       }
-      </style>
+      
     `;
     shadow.appendChild(style);
     console.log(style.isConnected);
