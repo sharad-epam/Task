@@ -3,6 +3,10 @@ class ResultInfo extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
+    author.setAttribute("class", "container");
+
+    const news = document.createElement("div");
+    news.setAttribute("id", "news");
 
     const author = document.createElement("h1");
     author.setAttribute("class", "author");
@@ -32,12 +36,13 @@ class ResultInfo extends HTMLElement {
     img.appendChild(pic);
 
     shadow.appendChild(wrapper);
-    wrapper.appendChild(author);
-    wrapper.appendChild(title);
-    wrapper.appendChild(desc);
-    wrapper.appendChild(publish);
-    wrapper.appendChild(img);
-    wrapper.appendChild(pic);
+    wrapper.appendChild(news);
+    news.appendChild(author);
+    news.appendChild(title);
+    news.appendChild(desc);
+    news.appendChild(publish);
+    news.appendChild(img);
+    news.appendChild(pic);
   }
 }
 
