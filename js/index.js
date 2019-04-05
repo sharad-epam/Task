@@ -1,3 +1,5 @@
+import resultHtml from "./custom-comp.js";
+
 let resultHtml = "";
 const getResults = (
   { author, title, description, publishedAt, url, urlToImage },
