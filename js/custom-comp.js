@@ -35,6 +35,51 @@ class ResultInfo extends HTMLElement {
     pic.src = imgUrl;
     img.appendChild(pic);
 
+    const style = document.createElement("style");
+    style.textContent = `
+    .container {
+        margin: 40px;
+      }
+      .news {
+        display: flex;
+        flex-direction: column;
+      }
+      .author {
+        text-align: center;
+        border-bottom: 5px solid #dfe6e9;
+      }
+      .pic {
+        width: 250px;
+        height: 200px;
+        border-radius: 6%;
+        margin: 10px;
+      }
+      .title {
+        font-size: 20px;
+        color: #636e72;
+        border-bottom: 1px solid;
+        padding: 10px;
+      }
+      .desc {
+        padding: 10px;
+        color: #2d3436;
+        font-size: 20px;
+      }
+      .publish {
+        padding: 10px;
+        font-size: 15px;
+        border-bottom: 1px solid;
+        width: 8%;
+        color: #b2bec3;
+      }
+      @media only screen and (max-width: 500px) {
+        .publish {
+          width: 50%;
+        }
+      }
+      
+    `;
+    shadow.appendChild(style);
     shadow.appendChild(wrapper);
     wrapper.appendChild(news);
     news.appendChild(author);
