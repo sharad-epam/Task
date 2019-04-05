@@ -80,6 +80,7 @@ class ResultInfo extends HTMLElement {
       
     `;
     shadow.appendChild(style);
+    console.log(style.isConnected);
     shadow.appendChild(wrapper);
     wrapper.appendChild(news);
     news.appendChild(author);
