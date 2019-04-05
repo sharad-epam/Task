@@ -1,6 +1,6 @@
 class ResultInfo extends HTMLElement {
-  constructor(arg) {
-    super(arg);
+  constructor() {
+    super();
     const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
     wrapper.setAttribute("class", "container");
