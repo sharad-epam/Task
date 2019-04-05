@@ -1,4 +1,4 @@
-import resultHtml from "./custom-comp.js";
+import resultElements from "./custom-comp.js";
 
 let resultHtml = "";
 const getResults = (
