@@ -1,12 +1,12 @@
 class ResultInfo extends HTMLElement {
   constructor() {
     super();
-    // const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
     wrapper.setAttribute("class", "container");
 
-    const news = document.createElement("div");
-    news.setAttribute("id", "news");
+    // const news = document.createElement("div");
+    // news.setAttribute("id", "news");
 
     const author = document.createElement("h1");
     author.setAttribute("class", "author");
@@ -78,8 +78,7 @@ class ResultInfo extends HTMLElement {
       
     `;
 
-    let shadow = document.createDocumentFragment();
-    //documentFragment.appendChild(listItem);
+    let news = document.createElement("li");
     shadow.appendChild(style);
     console.log(style.isConnected);
     shadow.appendChild(wrapper);
