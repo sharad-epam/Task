@@ -1,4 +1,5 @@
 let resultHtml = "";
+let newsId = "";
 const getResults = (
   { author, title, description, publishedAt, url, urlToImage },
   index
@@ -16,7 +17,7 @@ class fetchItems {
     try {
       const res = await fetch(url);
       let data = await res.json();
-      let newsId = document.getElementById("news");
+      newsId = document.getElementById("news");
       data = data.articles.map((item, index) => getResults(item, index));
     } catch (err) {
       console.error(err);
