@@ -6,7 +6,7 @@ const getResults = (
 ) => {
   console.log(title);
   const item = index === 0 ? `<result-info ${author} >` : "";
-    resultHtml += `<div><result-info item="${item}" title="${title}" desc=${description} publish=${publishedAt} src=${urlToImage}></result-info>${description}</div>`;
+    resultHtml += `<div><result-info author="${item}" title="${title}" desc="${description}" publish="${publishedAt}" src="${urlToImage}"></result-info></div>`;
 };
 class fetchItems {
   fetchingNews = async url => {
