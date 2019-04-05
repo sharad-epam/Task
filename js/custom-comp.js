@@ -1,7 +1,7 @@
 class ResultInfo extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: "open" });
+    // const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
     wrapper.setAttribute("class", "container");
 
@@ -77,6 +77,9 @@ class ResultInfo extends HTMLElement {
       }
       
     `;
+
+    let shadow = document.createDocumentFragment();
+    //documentFragment.appendChild(listItem);
     shadow.appendChild(style);
     console.log(style.isConnected);
     shadow.appendChild(wrapper);
