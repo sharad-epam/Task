@@ -8,7 +8,7 @@ const getResults = (
     index === 0 ? `<result-info author=${author} ></result-info>` : "";
   resultHtml += `<result-info item=${item} title=${title} desc=${description} publish=${publishedAt} pic=${urlToImage}>`;
   newsId.insertAdjacentHTML(
-    "afterend",
+    "afterbegin",
     `<result-info item=${item} title=${title} desc=${description} publish=${publishedAt} pic=${urlToImage}>`
   );
 };
@@ -17,8 +17,9 @@ class fetchItems {
     try {
       const res = await fetch(url);
       let data = await res.json();
-      newsId = document.getElementById("news");
+      let newsId = document.getElementById("news");
       data = data.articles.map((item, index) => getResults(item, index));
+      newsId.insertAdjacentHTML("afterbegin", resultHtml);
     } catch (err) {
       console.error(err);
     }
