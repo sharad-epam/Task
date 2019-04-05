@@ -6,6 +6,10 @@ const getResults = (
   const item =
     index === 0 ? `<result-info author=${author} ></result-info>` : "";
   resultHtml += `<result-info item=${item} title=${title} desc=${description} publish=${publishedAt} pic=${urlToImage}>`;
+  newsId.insertAdjacentHTML(
+    "afterend",
+    `<result-info item=${item} title=${title} desc=${description} publish=${publishedAt} pic=${urlToImage}>`
+  );
 };
 class fetchItems {
   fetchingNews = async url => {
@@ -14,7 +18,6 @@ class fetchItems {
       let data = await res.json();
       let newsId = document.getElementById("news");
       data = data.articles.map((item, index) => getResults(item, index));
-      newsId.insertAdjacentHTML("afterbegin", resultHtml);
     } catch (err) {
       console.error(err);
     }
