@@ -13,7 +13,7 @@ class fetchItems {
       const res = await fetch(url);
       let data = await res.json();
       let newsId = document.getElementById("news");
-      data = data.articles.map((item, index) => getResults(item, index));
+      data.articles.map((item, index) => getResults(item, index));
       newsId.insertAdjacentHTML("afterend", resultHtml);
     } catch (err) {
       console.error(err);
