@@ -3,6 +3,7 @@ class ResultInfo extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("div");
+    console.log('TESTTE', wrapper );
     wrapper.setAttribute("class", "container");
 
     // const news = document.createElement("div");
